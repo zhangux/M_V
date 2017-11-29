@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_video"
+        android:title="+添加为到>"
+        app:showAsAction="never">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/add_my_video"
+                    android:title="我的"
+                    app:showAsAction="never" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/select_video"
+        android:title="选择"
+        app:showAsAction="never" />
+</menu>

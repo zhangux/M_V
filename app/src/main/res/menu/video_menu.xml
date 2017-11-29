@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_order"
+        android:title="排序"
+        app:showAsAction="never">
+        <menu>
+            <group><!--single 单选   all  全选-->
+                <item
+                    android:id="@+id/order_name"
+                    android:title="名称" />
+                <item
+                    android:id="@+id/order_big_date"
+                    android:title="倒叙时间" />
+                <item
+                    android:id="@+id/order_date"
+                    android:title="正叙时间" />
+                <item
+                    android:id="@+id/order_big_size"
+                    android:title="倒叙大小" />
+                <item
+                    android:id="@+id/order_size"
+                    android:title="正叙大小" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/select_mod"
+        android:title="浏览模式"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/select_look_mod"
+        android:title="观看模式"
+        app:showAsAction="never" />
+</menu>

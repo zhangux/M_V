@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="我的好友"
+            android:id="@+id/left_menu_all"
+            android:icon="@mipmap/ic_launcher"
+            android:checked="true"/>
+        <item android:title="会员中心"
+            android:id="@+id/left_menu_my"
+            android:checked="true"
+            android:icon="@mipmap/ic_launcher"/>
+        <item android:title="定时关闭"
+            android:id="@+id/left_menu_star"
+            android:checked="true"
+            android:icon="@mipmap/ic_launcher"/>
+        <item android:title="听歌识曲"
+            android:id="@+id/left_menu_setting"
+            android:checked="true"
+            android:icon="@mipmap/ic_launcher"/>
+    </group>
+</menu>

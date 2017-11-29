@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_body_back"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/nd2"
+    android:orientation="vertical">
+
+    <com.cn.mv.widget.PagerEnabledSlidingPaneLayout
+        android:id="@+id/main_spl"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#8b000000">
+
+        <LinearLayout
+            android:id="@+id/main_left_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_left_menu_header" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/mn">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_marginTop="@dimen/font_20"
+                android:background="@android:color/transparent">
+
+                <!--  <TextView
+                      android:id="@+id/main_ss"
+                      android:layout_width="40dp"
+                      android:layout_height="40dp"
+                      android:clickable="true"
+                      android:gravity="center"
+                      android:text="Q"
+                      android:textColor="@color/darker_gray"
+                      android:textSize="25dp" />-->
+                <com.cn.mv.widget.CircleImageView
+                    android:id="@+id/toolbar_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:src="@mipmap/jzn" />
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/main_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal" />
+
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/main_update_menu"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_below="@id/main_toolbar"
+                android:background="#43000000"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/exit_main_update_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@android:color/white"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    android:src="@mipmap/exit_all" />
+
+                <TextView
+                    android:id="@+id/main_update_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:text="选中2文件"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:id="@+id/main_update_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/selector_tv_bg"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:text="全选"
+                    android:textColor="#a200ff26"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:id="@+id/main_update_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/selector_tv_bg"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:text="删除"
+                    android:textColor="#a200ff26"
+                    android:textSize="@dimen/size_12" />
+
+                <TextView
+                    android:id="@+id/main_update_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/selector_tv_bg"
+                    android:clickable="true"
+                    android:padding="5dp"
+                    android:text="+添加到>"
+                    android:textColor="#a200ff26"
+                    android:textSize="@dimen/size_12" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/main_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/main_update_menu" />
+
+
+        </RelativeLayout>
+    </com.cn.mv.widget.PagerEnabledSlidingPaneLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/font_50"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="正在播放：星月神话"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_20" />
+            <SeekBar
+                android:id="@+id/video_sb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/video_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/font_5"
+            android:scaleType="fitXY"
+            android:src="@mipmap/all_begin" />
+    </LinearLayout>-->
+</LinearLayout>
